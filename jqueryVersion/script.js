@@ -3,14 +3,32 @@ let todoList = [];
 
 $("#addButton").click(() => {
   const input = $("#addInput").val();
+  const todo = $(`<div class="text"></div>`);
+  todo.append(input);
 
-  const checkbox = `<input type="checkbox" class="check"></div>`;
-  const todo = `<div class="todo">${input}</div>`;
-  const removeBtn = `<button class="removeBtn">[지우기]</button>`;
+  const checkbox = $(`<input type="checkbox" class="tick"></div>`);
+  const removeBtn = $(`<button class="delete">[지우기]</button>`);
+  const todoItem = $(`<div class="todoItem"></div>`);
+  todoItem
+    .append(checkbox)
+    .append(todo)
+    .append(removeBtn);
 
-  const todoItem = `<div class="todoItem">${checkbox}${todo}${removeBtn}</div>`;
+  $(todoItem).click(() => {
+    if ($(checkbox).is(":checked")) {
+      $(checkbox).prop("checked", false);
+      $(todo).css("text-decoration", "none");
+    } else {
+      $(checkbox).prop("checked", true);
+      $(todo).css("text-decoration", "line-through");
+    }
+  });
 
-  todoList.push({ index: index++, todo });
+  $(removeBtn).click(e => {
+    e.stopPropagation();
+  });
+
+  todoList.push({ index: index++, todoItem });
   console.log(todoList);
   $("#todoList").append(todoItem);
 });
