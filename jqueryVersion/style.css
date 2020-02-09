@@ -1,0 +1,121 @@
+body {
+    background-color: #f1f3f5;
+}
+
+.container {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding-top: 2rem;
+}
+
+.container .titleContainer {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container .inputContainer {
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+}
+
+#addInput {
+    flex: 1 1;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ced4da;
+}
+
+#addInput:focus {
+    border-bottom: 1px solid green;
+}
+
+#addButton {
+    width: 5rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: 1px solid #37b24d;
+    color: #37b24d;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#addButton:hover {
+    background-color: #37b24d;
+    color: white;
+}
+
+.todoItem {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.todoItem:nth-child(odd) {
+    background: #f8f9fa;
+}
+
+.todoItem:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+
+.tick {
+    margin-right: 1rem !important;
+}
+
+.text {
+    flex: 1 1;
+    word-break: break-all;
+}
+
+.delete {
+    display: flex;
+    width: 5rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: none;
+    font-size: 0.8rem;
+    color: #f03e3e;
+    font-weight: 500;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.delete:hover {
+    color: #ff6b6b;
+}
