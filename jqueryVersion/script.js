@@ -1,6 +1,3 @@
-let index = 0;
-let todoList = [];
-
 $("#addButton").click(() => {
   const input = $("#addInput").val();
   const todo = $(`<div class="text"></div>`);
@@ -26,9 +23,8 @@ $("#addButton").click(() => {
 
   $(removeBtn).click(e => {
     e.stopPropagation();
+    $(todoItem).remove();
   });
 
-  todoList.push({ index: index++, todoItem });
-  console.log(todoList);
   $("#todoList").append(todoItem);
 });
