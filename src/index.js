@@ -1,10 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/main.scss';
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import "./styles/main.scss";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import configure from "store/configure";
+import * as serviceWorker from "utils/serviceWorker";
+import App from "./components/App";
+
+const store = configure();
+
+const renderApp = () => (
+  <Provider store={store}>
+    <BrowserRouter basename="/rpviewer/new-aporia-viewer-master">
+      <App />
+    </BrowserRouter>
+  </Provider>
+);
+
+ReactDOM.render(renderApp(), document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
