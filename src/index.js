@@ -12,7 +12,7 @@ const store = configure();
 
 const renderApp = () => (
   <Provider store={store}>
-    <BrowserRouter basename="/rpviewer/new-aporia-viewer-master">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>
