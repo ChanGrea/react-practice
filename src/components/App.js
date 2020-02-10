@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import PageTemplate from "./PageTemplate";
-import { TodoInput, TodoList } from "components";
+import { PageTemplate, TodoInput, TodoList } from "components";
 
 const initialTodos = new Array(500)
   .fill(0)
