@@ -4,11 +4,12 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const PageTemplate = ({ children }) => {
+const PageTemplate = props => {
+  const { title, content } = props;
   return (
     <div className={cx("page-template")}>
-      <h1>일정 관리</h1>
-      <div className={cx("content")}>{children}</div>
+      <h1>{title}</h1>
+      <div className={cx("content")}>{content}</div>
     </div>
   );
 };
