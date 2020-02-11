@@ -1,8 +1,8 @@
 import React from "react";
 import { PageTemplate } from "components";
 
-const todoPage = ({ children }) => {
+const TodoPage = ({ children }) => {
   return <PageTemplate title="일정 관리" content={children} />;
 };
 
-export default todoPage;
+export default TodoPage;
